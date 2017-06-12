@@ -4,7 +4,6 @@
 
 ### Table of Contents
 1. [Introduction](sections/introduction/)
-2. [Basics](sections/basics)
     1. [Getting Started]()
     2. [Objectives]()
 3. [Section 1: Applying Virtual Lock Masses and Alignment](sections/vlm_align/)
