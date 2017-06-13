@@ -4,16 +4,16 @@
 
 ### Table of Contents
 1. [Introduction](sections/introduction/)
-    1. [Getting Started]()
-    2. [Objectives]()
+    1. [Getting Started](sections/introduction/#getting-started)
+    2. [Objectives](sections/introduction/#objectives)
 3. [Section 1: Applying Virtual Lock Masses and Alignment](sections/vlm_align/)
-    1. [Loading the spectra]()
-    2. [Applying the Virtual Lock Mass Algorithm]()
-    3. [Applying Alignment]()
+    1. [Loading the spectra](sections/vlm_align/#loading-the-spectra)
+    2. [Applying the Virtual Lock Mass Algorithm](sections/vlm_align/#applying-the-virtual-lock-mass-algorithm)
+    3. [Applying Alignment](sections/vlm_align/#applying-alignment)
 4. [Section 2: Applying Machine Learning Algorithms](sections/machine_learning/)
-    1. [Experimental Protocol]()
-    2. [Cross-validation]()
-    3. [Assessing the accuracy]()
+    1. [Experimental Protocol](sections/machine_learning/#experimental-protocol)
+    2. [Cross-validation](sections/machine_learning/#cross-validation)
+    3. [Assessing the accuracy](sections/machine_learning/#assessing-the-accuracy)
 5. [Conclusion](sections/conclusion/)
 
 
