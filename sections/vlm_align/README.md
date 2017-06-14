@@ -4,7 +4,7 @@
 
 The dataset used for this tutorial is a set of 80 samples of red blood cell cultures. 
 Their spectra was acquired by LDTD-ToF mass spectrometry on a Waters Synapt G2-Si instrument. 
-These spectra were acquired in high resolution mode using a data independant acquisition mode (MS^e).
+These spectra were acquired in high resolution mode using a data independant acquisition mode ($MS^e$).
 
 Of these 80 samples, 40 are from red blood cell cultures infected by malaria. 
 The other 40 samples are not infected. It is the objective of this tutorial to correct and align these spectra in order to classify them by machine learning.
@@ -27,21 +27,33 @@ However, no mass correction or alignment has been applied to this data.
 
 *summarize correction problem*
 
-*show example figure*
-
-*the virtual lock mass algorithm must be applied to the dataset*
+The code for the Virtual Lock Mass Corrector is imported by the following command.
 
 ```python
-code snippet
+from tutorial_code.virtual_lock_mass import VirtualLockMassCorrector
 ```
 
-*explain commands*
+After this, we need to create a corrector.
+The command below creates one with a maximum window size of 40 ppms and a minimum peak intensity of 1000.
+These settings provide the maximum number of VLM correction points on the dataset.
+
+The corrector is subsequently fitted to the dataset.
+It is at this step that the algorithm detects the Virtual Lock Mass points, as described in Plenary session 9.
+
+Once the algorithm has detected the correction points, we will use the *transform* function in order to apply the correction algorithm to the spectra.
+The resulting corrected spectra need to be stored in a new variable, *corrected_spectra*.
+
+```python
+corrector = VirtualLockMassCorrector(window_size=40, minimum_peak_intensity=1000)
+
+corrector.fit(spectra)
+
+corrected_spectra = corrector.transform(spectra)
+```
 
 ## Applying Alignment
 
 *VLM peaks are already aligned, but some variation remains on other peaks*
-
-*fig?*
 
 *an alignment algorithm must be applied to the data to render spectra more comparable*
 
