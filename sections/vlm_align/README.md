@@ -53,12 +53,19 @@ corrected_spectra = corrector.transform(spectra)
 
 ## Applying Alignment
 
-*VLM peaks are already aligned, but some variation remains on other peaks*
+Now that larger shifts between samples have been corrected, one step remains for the preprocessing of the spectra.
+This is an **alignment** step, in order to remove small random variations in the m/z values of the peaks.
+These variations are due to random noise, to quantum effects in detection and to preprocessing by the mass spectrometer for example.
 
-*an alignment algorithm must be applied to the data to render spectra more comparable*
+We import the code for the aligned with this command:
 
 ```python
-code snippet
+from tutorial_code.utils import Aligner
+```
+fill
+
+```python
+snippet
 ```
 
 *Intensity normalisations can be introduced at this point*
