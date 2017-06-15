@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/ActiveSequence.cpp
+ActiveSequence.h
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/ActiveSequence.h
+
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/ActiveSequence.h
+list
+-
+vector
+-
+Heap.h
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/Heap.h
+
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/Heap.cpp
+Heap.h
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/Heap.h
+
+/Users/mariomarchand/ClionProjects/MassSpectraAlign/Heap.h
+vector
+-
+algorithm
+-
+memory
+-
+iostream
+-
+
