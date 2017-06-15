@@ -44,7 +44,7 @@ def extract_tags(spectra):
 
     return np.asarray(tags)
 
-def evaluate(y_true, y_pred):
+def evaluate_learner(y_true, y_pred):
     results = {}
     results["zero_one_loss"] = zero_one_loss(y_true, y_pred)
     results["f1_score"] = f1_score(y_true, y_pred)
