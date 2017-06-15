@@ -5,6 +5,7 @@ from .spectrum import Spectrum, unify_mz
 from .spectrum_io import hdf5_load
 from .spectrum_utils import ThresholdedPeakFiltering
 from copy import deepcopy
+from sklearn.metrics import zero_one_loss, f1_score, precision_score, recall_score
 
 def load_spectra(datafile):
     """
@@ -42,3 +43,11 @@ def extract_tags(spectra):
             tags.append(1)
 
     return np.asarray(tags)
+
+def evaluate(y_true, y_pred):
+    results = {}
+    results["zero_one_loss"] = zero_one_loss(y_true, y_pred)
+    results["f1_score"] = f1_score(y_true, y_pred)
+    results["precision"] = precision_score(y_true, y_pred)
+    results["recall"] = recall_score(y_true, y_pred)
+    return results
