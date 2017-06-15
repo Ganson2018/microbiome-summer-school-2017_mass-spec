@@ -146,10 +146,6 @@ def unify_mz(spectra):
     -----------
     spectra: list of Spectrum
         A list of spectra.
-
-    Note:
-    -----
-    * The operation is performed in-place
     """
     if not _is_mz_precision_equal(spectra[0].mz_precision, spectra):
         raise ValueError("The m/z precision of the spectra must be equal in order to unify the m/z values.")

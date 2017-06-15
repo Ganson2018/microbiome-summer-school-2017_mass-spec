@@ -28,8 +28,6 @@ class Mass_Spectra_Aligner():
         path = "tutorial_code/cpp_extensions"
         self._write_mz_values_to_file(spectra, path)
 
-        print(self.window_size)
-
         call([str(join(path, "alignment")),
                   "temp_spectra.csv",
                   str(self.window_size)])
