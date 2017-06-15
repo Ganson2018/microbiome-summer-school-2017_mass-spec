@@ -13,7 +13,7 @@ add_library(MS STATIC ActiveSequence.cpp Heap.cpp)
 
 link_directories(${PROJECT_SOURCE_DIR})
 
-add_executable(main main.cpp)
-target_link_libraries(main MS)
+add_executable(alignment alignment.cpp)
+target_link_libraries(alignment MS)
 
 #add_subdirectory(Tests)

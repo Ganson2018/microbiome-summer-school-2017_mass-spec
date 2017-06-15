@@ -121,8 +121,8 @@ vector<double> alignmentPointDetection(const vector<vector<double> > &peak, doub
     return alignmentPoint;
 }
 
-/**
-int main()
+
+int main( int argc, char *argv[])
 {
     const unsigned int bufferSize = 2000000;
     char buffer[bufferSize];
@@ -135,13 +135,20 @@ int main()
     ofstream output_file(output_file_name);
 
     string input_file_name;
-    cout << "Enter name of file containing the spectra: ";
-    cin >> input_file_name;
     double window_size;
-    cout << "Enter window size in relative units: ";
-    cin >> window_size;
-    cout << "In progress ..." << endl;
-
+    if(argc == 3){
+        input_file_name = argv[1];
+//        cout << "Enter name of file containing the spectra: ";
+//        cin >> input_file_name;
+        window_size = stod(argv[2]);
+        window_size = window_size / 1000000;
+//        cout << "Enter window size in relative units: ";
+//        cin >> window_size;
+//        cout << "In progress ..." << endl;
+    }
+    else{
+        //error
+    }
     ifstream input_file(input_file_name);
     if (!input_file.is_open())
         logic_error("main(): Cannot open file containing spectra");
@@ -172,7 +179,7 @@ int main()
     cout << "alignment points: " ;
 #endif
     for (const auto &v : alignmentPoint)
-#    {
+    {
         output_file << v << " ";
     }
     output_file << endl;
@@ -180,4 +187,4 @@ int main()
 
     return 0;
 }
-**/
+
