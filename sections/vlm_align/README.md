@@ -60,14 +60,45 @@ These variations are due to random noise, to quantum effects in detection and to
 We import the code for the aligned with this command:
 
 ```python
-from tutorial_code.utils import Aligner
+from tutorial_code.aligner import Mass_Spectra_Aligner
 ```
-fill
+We then create an aligner.
+The command below creates an aligner with a window size of 20 ppms.
+
+As with the corrector, the aligner first needs to be *fitted* to the set of spectra.
+During this steps, it detects the alignment sequences and alignment points needed to align the spectra.
+
+Afterwards, we *transform* the dataset by applying the alignment to the spectra.
+Individual peaks will be moved to the alignment point closest to their m/z value, as long as that m/z value is within the window of 20 ppms.
 
 ```python
-snippet
+aligner = Mass_Spectra_Aligner(window_size=20)
+
+aligner.fit(corrected_spectra)
+
+aligned_spectra = aligner.transform(corrected_spectra)
 ```
 
-*Intensity normalisations can be introduced at this point*
+After both correction and alignment, the spectra are ready to be compared.
+Although the format of the data is not right for statistical analysis or machine learning applications, since these methods require the data to be in **matrix** form.
 
-*The data is ready to be converted into a format appropriate for machine learning*
+We then convert the data into a matrix using the given code.
+
+```python
+from tutorial_code.utils import spectrum_to_matrix
+
+data = spectrum_to_matrix(aligned_spectra)
+```
+
+Finally, we need to extract the labels from the spectra in order to be able to classify the spectra according to their status (infected or not infected by malaria).
+
+The following code will extract the tags from the data and return it.
+
+```python
+from tutorial_code.utils import extract_tags
+
+tags = extract_tags(aligned_spectra)
+```
+
+We are now ready to apply machine learning approaches to the set of spectra.
+Please proceed to the next section.
