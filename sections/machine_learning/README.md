@@ -70,7 +70,7 @@ We want to avoid an effect called **overfitting**, as shown on the figure below.
 This effect is when the algorithm performs very well on the training set but its prediction do not generalize to a testing set.
 This effect is why we split the dataset into training and testing set, in order to confirm if this happens, and why we use cross-validation, to find parameters that do not overfit.
 
-<img src="figures/overfitting.png" height="150" />
+<img src="figures/overfitting.png" height="250" />
 
 Our first step when we want to evaluate the learner is that we need its predictions on the training set and testing sets.
 The following commands, using the *predict* function, returns the predictions of the learner on the data it is given.
