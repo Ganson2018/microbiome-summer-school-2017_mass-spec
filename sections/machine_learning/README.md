@@ -27,6 +27,8 @@ X_train, X_test, Y_train, Y_test = train_test_split(data, tags, test_size=0.25, 
 
 *quick review of cross validation*
 
+<img src="figures/cross_validation.png" height="150" />
+
 *already implemented in sklearn*
 
 *create a learner*
@@ -42,7 +44,7 @@ learner = GridSearchCV(DecisionTreeClassifier,param_grid)
 
 *review of overfitting*
 
-*fun overfit figure*
+<img src="figures/overfitting.png" height="150" />
 
 *some metrics*
 
