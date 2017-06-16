@@ -1,3 +1,5 @@
+<a href="../../#table-of-contents"><-- Back to table of contents</a>
+
 # Applying Virtual Lock Masses and Alignment
 
 ## Loading the spectra
