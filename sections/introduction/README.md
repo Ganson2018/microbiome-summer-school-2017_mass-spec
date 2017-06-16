@@ -20,6 +20,18 @@ This will simply compile some c++ code that will be used for the alignment algor
 sh install.sh
 ```
 
+Then, enter the example directory
+
+```bash
+cd example/
+```
+
+And open a jupyter notebook
+
+```bash
+jupyter notebook
+```
+
 ## Objectives
 
 After completing this tutorial, you should have acquired the following skills:
