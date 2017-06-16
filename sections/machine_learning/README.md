@@ -1,3 +1,5 @@
+<a href="../../#table-of-contents"><-- Back to table of contents</a>
+
 # Applying Machine Learning Algorithms
 
 For more information on machine learning, see the previous tutorial at [this page](https://aldro61.github.io/microbiome-summer-school-2017/).
