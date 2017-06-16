@@ -27,7 +27,12 @@ However, no mass correction or alignment has been applied to this data.
 
 ## Applying the Virtual Lock Mass Algorithm
 
-*summarize correction problem*
+As mentionned during the plenary lecture, ToF mass spectra have variations due to varying atmospheric conditions, temperature and calibration.
+These variations are generaly in the form of shifts on the m/z values of peaks, as shown with two spectra in the figure below.
+We thus need a correction algorithm in order to correct these shifts and bring the spectra on a more comparable basis.
+This is the Virtual Lock Mass algorithm, presented in the plenary lecture.
+
+<img src="figures/offset.png" height="250" />
 
 The code for the Virtual Lock Mass Corrector is imported by the following command.
 
@@ -54,6 +59,13 @@ corrected_spectra = corrector.transform(spectra)
 ```
 
 ## Applying Alignment
+
+**Note: please insure the code for the aligner is installed prior to this step.<
+Just enter the root directory of  this tutorial and run the command:**
+
+```bash
+sh install.sh
+```
 
 Now that larger shifts between samples have been corrected, one step remains for the preprocessing of the spectra.
 This is an **alignment** step, in order to remove small random variations in the m/z values of the peaks.
