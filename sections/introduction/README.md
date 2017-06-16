@@ -13,6 +13,13 @@ As with a previous tutorial in this summer school, we will rely on the scikit-le
 
 <img src="http://www.numpy.org/_static/numpy_logo.png" height="50" />
 
+Please ensure you run the install script in order for some sections of code to work.
+This will simply compile some c++ code that will be used for the alignment algorithm.
+
+```bash
+sh install.sh
+```
+
 ## Objectives
 
 After completing this tutorial, you should have acquired the following skills:
