@@ -2,6 +2,9 @@
 #author = Francis Brochu
 #Microbiome Summer School 2017
 
+conda create -n ms python=3.5 anaconda
+
+source activate ms
 
 cd example/tutorial_code/cpp_extensions
 
