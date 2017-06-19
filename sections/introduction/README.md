@@ -41,7 +41,13 @@ If you want to run this tutorial from elsewhere than the virtual machine from th
 sh install_without_conda.sh
 ```
 
-The steps are then identical to above.
+The command to activate the virtual environment is slightly different, shown below:
+
+```bash
+source ms/bin/activate
+```
+
+You can then enter the *example* directory and open a jupyter notebook.
 
 ## Objectives
 
