@@ -20,9 +20,10 @@ This will simply compile some c++ code that will be used for the alignment algor
 sh install.sh
 ```
 
-Then, enter the example directory
+Then, activate the conda environment and enter the example directory
 
 ```bash
+activate ms
 cd example/
 ```
 
@@ -31,6 +32,16 @@ And open a jupyter notebook
 ```bash
 jupyter notebook
 ```
+
+**Alternative :**
+
+If you want to run this tutorial from elsewhere than the virtual machine from the Summer School, use the *install_without_conda.sh* script that does not use anaconda or miniconda.
+
+```bash
+sh install_without_conda.sh
+```
+
+The steps are then identical to above.
 
 ## Objectives
 
