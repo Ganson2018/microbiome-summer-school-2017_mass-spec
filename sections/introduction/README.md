@@ -49,10 +49,17 @@ If you want to run this tutorial from elsewhere than the virtual machine from th
 sh install_without_conda.sh
 ```
 
-The command to activate the virtual environment is slightly different, shown below:
+We then activate the virtual environment created in the install script and instal the python dependancies.
+Copy and paste into the terminal the following command.
 
 ```bash
-source ms/bin/activate
+source ms/bin/activate && \
+pip3 install numpy --upgrade && \
+pip3 install scipy --upgrade && \
+pip3 install scikit-learn --upgrade && \
+pip3 install h5py --upgrade && \
+pip3 install jupyter --upgrade
+
 ```
 
 You can then enter the *example* directory and open a jupyter notebook.
